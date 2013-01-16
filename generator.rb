@@ -20,6 +20,6 @@ f = File.new("layout.erb")
 html = ERB.new(f.read).result(binding)
 puts html
 
-File.open("gh_pages/index.html", "w") do |x|
+File.open("gh-pages/index.html", "w") do |x|
   x.puts(html)
 end
