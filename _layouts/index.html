@@ -1,0 +1,9 @@
+<html>
+  <body>
+    <ul>
+    <% @posts.each do |x| %>
+    <li><%= x.created_date %>  <a href="_sites/<%= x.url %>"><%= x.title %></a></li>
+    <% end %>
+    </ul>
+  </body>
+</html>
