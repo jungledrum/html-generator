@@ -18,6 +18,10 @@ Dir.foreach("_posts") do |x|
   end
 end
 
+@posts.sort! do |x,y|
+  -(x.created_date <=> y.created_date)
+end
+
 f = File.new("_layouts/index.html")
 html = ERB.new(f.read).result(binding)
 
